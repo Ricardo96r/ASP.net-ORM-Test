@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{76FB3442-ED5A-4A85-8EB3-F3DC573D3F67}|Default">
+  <MonoDevelop.Ide.ItemProperties.ASP.net-ORM-Test PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ASP.net-ORM-Test Status">
+    <Files>
+      <File FileName="ASP.net-ORM-Test Status" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ASP.net-ORM-Test" expanded="True" selected="True">
+            <Node name="ASP.net-ORM-Test" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
