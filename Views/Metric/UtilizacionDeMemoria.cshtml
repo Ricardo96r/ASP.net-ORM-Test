@@ -1,0 +1,41 @@
+﻿<div class="row">
+    <div class="col">
+        <h1>Utilización de recursos</h1>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col">
+        <partial name="~/Views/Shared/Metrics/_UtilizacionDeMemoria.cshtml" />
+        <h3>Código</h3>
+        <hr />
+        <img src="~/images/metrics/memoria.png" width="400" />
+
+        <h3>Anotaciones</h3>
+        <hr />
+        <p>Para obtener los resultados para la métrica de <strong>utilización de memoria</strong> se tuvo que usar la libreria de <code>GC (Garbage collector)</code> para medir la cantidad de memoria usada por la ejecución de una petición en el Entity Framework.</p>
+        <p>La peticion simple realizada con el Entity Framework fue traer un estudiante de la base de datos a traves de su ID <code>context.Students.Find(i);</code> Se repite el proceso @ViewBag.kbList.Count veces con @ViewBag.kbList.Count estudiantes diferentes.</p>
+        <p>Para obtener la cantidad de memoria, se obtiene la memoria actual usada <code>var now = GC.GetTotalMemory(false);</code>, se ejecuta la peticion con el Entity Framework y luego se mide la cantidad de memoria actual <code>var after = GC.GetTotalMemory(false);</code>, para luego restar las memorias de inicio y final y asi obtener la memoria usada por la peticion del Entity Framework <code>memory = after - now</code></p>
+        <h3>Resultados</h3>
+        <hr />
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>Memoria (kb)</h4>
+                @{int i = 1;}
+                @foreach (var item in ViewBag.kbList)
+            {
+                <p>@i - @item kb </p>
+            i++;
+        }
+            </div>
+
+            <div class="col-xs-6">
+                <h4>Utilización de memoria</h4>
+                <p><strong>Cantidad de pruebas: </strong>@ViewBag.kbList.Count</p>
+                <p><strong>Promedio: </strong>@ViewBag.kbAverage kb</p>
+                <p><strong>Desviación estandar: </strong>@ViewBag.kbStdDev kb</p>
+                <p><strong>Error: </strong>@ViewBag.kbStandardError kb</p>
+            </div>
+        </div>
+    </div>
+</div>

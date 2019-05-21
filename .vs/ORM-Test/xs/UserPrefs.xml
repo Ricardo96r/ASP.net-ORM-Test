@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{76FB3442-ED5A-4A85-8EB3-F3DC573D3F67}|Default">
+  <MonoDevelop.Ide.ItemProperties.ASP.net-ORM-Test PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/MetricController.cs">
+    <Files>
+      <File FileName="Controllers/HomeController.cs" Line="26" Column="10" />
+      <File FileName="Controllers/MetricController.cs" Line="19" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ORM-Test" expanded="True" selected="True">
+            <Node name="ASP.net-ORM-Test" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

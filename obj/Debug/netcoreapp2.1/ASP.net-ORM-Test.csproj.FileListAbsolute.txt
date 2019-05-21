@@ -30,3 +30,14 @@
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.dll
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.pdb
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.csproj.CopyComplete
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Shared/metrics/_Capacidad.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Shared/metrics/_Rendimiento.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Shared/metrics/_TiempoDeRespuesta.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Shared/metrics/_UtilizacionDeCache.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Shared/metrics/_UtilizacionDeMemoria.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Metric/TiempoDeRespuesta.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Metric/Capacidad.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Metric/Rendimiento.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Metric/UtilizacionDeCache.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Metric/UtilizacionDeMemoria.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/Razor/Views/Metric/VelocidadBajoEstres.g.cshtml.cs
