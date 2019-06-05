@@ -20,12 +20,23 @@
         <hr />
         <div class="row">
             <div class="col-xs-6">
-                @{int i = 1;}
-                @foreach (var item in ViewBag.msList)
-            {
-                <p>@i - @item ms </p>
-            i++;
-        }
+                <h4>Capacidad (ms)</h4>
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Miliseconds</th>
+                    </tr>
+
+                    @{int i = 1;}
+                    @foreach (var item in ViewBag.msList)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@item</td>
+            </tr>
+i++;
+}
+                </table>
             </div>
             <div class="col-xs-6">
                 <h4>Capacidad</h4>

@@ -22,13 +22,23 @@ namespace ASP.net_ORM_Test.Controllers
         public double StandardDeviation(List<double> values)
         {
             double avg = values.Average();
-            return Math.Sqrt(values.Average(v => Math.Pow(v - avg, 2)));
+            double result = Math.Sqrt(values.Average(v => Math.Pow(v - avg, 2)));
+
+            return Math.Round(result, 4);
         }
 
         public double StandardError(List<double> values)
         {
             double standarDeviation = StandardDeviation(values);
-            return 3*(standarDeviation/Math.Sqrt(values.Count));
+            double result = 3*(standarDeviation/Math.Sqrt(values.Count));
+
+            return  Math.Round(result, 4);
+        }
+
+        public double Average(List<double> values)
+        {
+            double result = values.Average();
+            return Math.Round(result, 4);
         }
 
         public void ActiveDatabase()
@@ -36,9 +46,11 @@ namespace ASP.net_ORM_Test.Controllers
             context.Students.Find(10000);
         }
 
-        public double getMiliseconds(double ticks)
+        public double getMiliseconds(decimal ticks)
         {
-            return (double) ticks / (double)1000000;
+            decimal miliseconds = (decimal) (ticks / 100000);
+            decimal round = Math.Round(miliseconds, 4);
+            return (double)round;
         }
 
         public IActionResult TiempoDeRespuesta()
@@ -55,7 +67,7 @@ namespace ASP.net_ORM_Test.Controllers
             }
 
             ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
+            ViewBag.msAverage = Average(ms);
             ViewBag.msStdDev = StandardDeviation(ms);
             ViewBag.msStandardError = StandardError(ms);
           
@@ -82,7 +94,7 @@ namespace ASP.net_ORM_Test.Controllers
             }
 
             ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
+            ViewBag.msAverage = Average(ms);
             ViewBag.msStdDev = StandardDeviation(ms);
             ViewBag.msStandardError = StandardError(ms);
 
@@ -102,7 +114,7 @@ namespace ASP.net_ORM_Test.Controllers
             }
 
             ViewBag.kbList = kb;
-            ViewBag.kbAverage = kb.Average();
+            ViewBag.kbAverage = Average(kb);
             ViewBag.kbStdDev = StandardDeviation(kb);
             ViewBag.kbStandardError = StandardError(kb);
 
@@ -127,12 +139,12 @@ namespace ASP.net_ORM_Test.Controllers
             }
 
             ViewBag.kbList = kb;
-            ViewBag.kbAverage = kb.Average();
+            ViewBag.kbAverage = Average(kb);
             ViewBag.kbStdDev = StandardDeviation(kb);
             ViewBag.kbStandardError = StandardError(kb);
 
             ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
+            ViewBag.msAverage = Average(ms);
             ViewBag.msStdDev = StandardDeviation(ms);
             ViewBag.msStandardError = StandardError(ms);
 
@@ -153,7 +165,7 @@ namespace ASP.net_ORM_Test.Controllers
             }
 
             ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
+            ViewBag.msAverage = Average(ms);
             ViewBag.msStdDev = StandardDeviation(ms);
             ViewBag.msStandardError = StandardError(ms);
 
@@ -173,11 +185,13 @@ namespace ASP.net_ORM_Test.Controllers
                     context.Students.Find(j + (i * iterations));
                 }
                 watch.Stop();
-                ms.Add(getMiliseconds(watch.ElapsedTicks) / iterations);
+                double result = getMiliseconds(watch.ElapsedTicks) / iterations;
+                decimal round = Math.Round((decimal)result, 4);
+                ms.Add((double)round);
             }
 
             ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
+            ViewBag.msAverage = Average(ms);
             ViewBag.msStdDev = StandardDeviation(ms);
             ViewBag.msStandardError = StandardError(ms);
 

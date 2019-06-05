@@ -21,12 +21,22 @@
         <div class="row">
             <div class="col-xs-6">
                 <h4>Tiempo total (ms) / cantidad de llamadas</h4>
-                @{int i = 1;}
-                @foreach (var item in ViewBag.msList)
-            {
-                <p>@i - @item ms </p>
-            i++;
-        }
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Miliseconds</th>
+                    </tr>
+
+                    @{int i = 1;}
+                    @foreach (var item in ViewBag.msList)
+                {
+                <tr>
+                    <td>@i</td>
+                    <td>@item</td>
+                </tr>
+                i++;
+                }
+                </table>
             </div>
             <div class="col-xs-6">
                 <h4>Velocidad bajo estrés</h4>

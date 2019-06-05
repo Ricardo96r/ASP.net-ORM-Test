@@ -1,11 +1,9 @@
-﻿@model  Student
-
-<div class="row">
+﻿<div class="row">
     <div class="col">
         <h1>Comportamiento temporal</h1>
     </div>
 </div>
-<hr />
+<hr /> 
 <div class="row">
     <div class="col">
         <partial name="~/Views/Shared/Metrics/_TiempoDeRespuesta.cshtml" />
@@ -22,13 +20,24 @@
         <div class="row">
             <div class="col-xs-6">
                 <h4>Tiempo (ms)</h4>
-                @{int i = 1;}
-                @foreach (var item in ViewBag.msList)
-            {
-                <p>@i - @item ms </p>
-            i++;
-        }
-            </div>
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Miliseconds</th>
+                    </tr>
+
+                    @{int i = 1;}
+                    @foreach (var item in ViewBag.msList)
+    {
+                <tr>
+                    <td>@i</td>
+                    <td>@item</td>
+                </tr>
+i++;
+}
+
+                </table>
+                </div>
             <div class="col-xs-6">
                 <h4>Tiempo de respuesta</h4>
                 <p><strong>Cantidad de pruebas: </strong>@ViewBag.msList.Count</p>

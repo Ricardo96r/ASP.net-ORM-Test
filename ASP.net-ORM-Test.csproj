@@ -14,20 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Shared\Metrics\" />
     <Folder Include="Views\Metric\" />
     <Folder Include="wwwroot\images\metrics\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="Views\Shared\metrics\_VelocidadBajoEstres.cshtml" />
-    <Content Remove="Views\Metric\_Rendimiento.cshtml" />
-    <Content Remove="wwwroot\images\metrics\TiempoDeRespuesta.cshtml" />
-    <Content Remove="wwwroot\images\metrics\tiempoDeRespuesta.png" />
-    <Content Remove="wwwroot\images\metrics\rendimiento.png" />
-    <Content Remove="wwwroot\images\metrics\memoria.png" />
-    <Content Remove="wwwroot\images\metrics\cache.png" />
-    <Content Remove="wwwroot\images\metrics\capacidad.png" />
-    <Content Remove="wwwroot\images\metrics\velocidadBajoEstres.png" />
+    
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\images\metrics\tiempoDeRespuesta.png" />
@@ -36,5 +27,8 @@
     <None Include="wwwroot\images\metrics\cache.png" />
     <None Include="wwwroot\images\metrics\capacidad.png" />
     <None Include="wwwroot\images\metrics\velocidadBajoEstres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\metrics\TiempoDeRespuesta.cshtml" />
   </ItemGroup>
 </Project>

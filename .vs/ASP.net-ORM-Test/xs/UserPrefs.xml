@@ -1,46 +1,34 @@
-﻿<Properties StartupConfiguration="{76FB3442-ED5A-4A85-8EB3-F3DC573D3F67}|Default">
+﻿<Properties StartupConfiguration="{E60209DC-C100-4560-8750-8D149B0D1F16}|Default">
   <MonoDevelop.Ide.ItemProperties.ASP.net-ORM-Test PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Views/Metric/Capacidad.cshtml">
     <Files>
+      <File FileName="Views/Shared/metrics/_VelocidadBajoEstres.cshtml" Line="16" Column="16" />
+      <File FileName="Views/Shared/metrics/_TiempoDeRespuesta.cshtml" Line="14" Column="16" />
+      <File FileName="Views/Metric/TiempoDeRespuesta.cshtml" Line="23" Column="17" />
+      <File FileName="Views/Metric/UtilizacionDeCache.cshtml" Line="56" Column="22" />
+      <File FileName="Views/Metric/UtilizacionDeMemoria.cshtml" Line="25" Column="25" />
+      <File FileName="Views/Metric/Rendimiento.cshtml" Line="35" Column="22" />
+      <File FileName="Controllers/MetricController.cs" Line="41" Column="42" />
       <File FileName="Views/Metric/VelocidadBajoEstres.cshtml" Line="11" Column="15" />
-      <File FileName="Views/Shared/_Layout.cshtml" Line="33" Column="83" />
-      <File FileName="Views/Metric/TiempoDeRespuesta.cshtml" Line="21" Column="15" />
-      <File FileName="Controllers/MetricController.cs" Line="142" Column="41" />
       <File FileName="wwwroot/images/metrics/TiempoDeRespuesta.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Metric/Rendimiento.cshtml" Line="28" Column="10" />
-      <File FileName="Views/Metric/UtilizacionDeMemoria.cshtml" Line="12" Column="43" />
-      <File FileName="Views/Metric/UtilizacionDeCache.cshtml" Line="51" Column="20" />
-      <File FileName="Views/Metric/Capacidad.cshtml" Line="13" Column="33" />
+      <File FileName="Program.cs" Line="44" Column="1" />
+      <File FileName="Views/Metric/Capacidad.cshtml" Line="28" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASP.net-ORM-Test" expanded="True">
             <Node name="ASP.net-ORM-Test" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
                 <Node name="Metric" expanded="True">
                   <Node name="Capacidad.cshtml" selected="True" />
                 </Node>
-                <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="images" expanded="True">
-                  <Node name="metrics" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

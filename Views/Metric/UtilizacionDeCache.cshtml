@@ -21,20 +21,42 @@
         <div class="row">
             <div class="col-xs-3">
                 <h4>Tiempo (ms)</h4>
-                @{int i = 1;}
-                @foreach (var item in ViewBag.msList)
-            {
-                <p>@i - @item ms </p>
-            i++;
-        }
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Miliseconds</th>
+                    </tr>
+
+                    @{int i = 1;}
+                    @foreach (var item in ViewBag.msList)
+    {
+                <tr>
+                    <td>@i</td>
+                    <td>@item</td>
+                </tr>
+i++;
+}
+
+                </table>
             </div>
             <div class="col-xs-3">
                 <h4>Memoria (kb)</h4>
-                @foreach (var item in ViewBag.kbList)
-            {
-                <p>@item kb </p>
 
-        }
+                <table class="table">
+                    <tr>
+                        <th>bytes</th>
+                    </tr>
+
+
+                    @foreach (var item in ViewBag.kbList)
+    {
+                <tr>
+
+                    <td>@item</td>
+                </tr>
+}
+
+                </table>
             </div>
             <div class="col-xs-6">
                 <h4>Utilización de cache</h4>
