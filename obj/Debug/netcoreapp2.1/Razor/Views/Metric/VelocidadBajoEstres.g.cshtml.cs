@@ -57,7 +57,7 @@ using ASP.net_ORM_Test.Models;
             WriteLiteral("<div class=\"row\">\n    <div class=\"col\">\n        <h1>Capacidad del software</h1>\n    </div>\n</div>\n<hr />\n<div class=\"row\">\n    <div class=\"col\">\n        ");
             EndContext();
             BeginContext(153, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f1a270fbc0da4a6d833861a3682f5f35", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6c4c13c1fb1e48d2b3060cddc70a9d38", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -76,7 +76,7 @@ using ASP.net_ORM_Test.Models;
             WriteLiteral("\n        <h3>Código</h3>\n        <hr />\n        ");
             EndContext();
             BeginContext(270, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a8923373fe144c84820ca8964fb6d1e5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e1d91fa0b7284eb9a2efd13d117e7921", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

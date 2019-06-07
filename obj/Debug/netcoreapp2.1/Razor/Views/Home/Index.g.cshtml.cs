@@ -87,7 +87,7 @@ using ASP.net_ORM_Test.Models;
             ");
             EndContext();
             BeginContext(633, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e9f64c4d17fc43e98b8b14d8e6a277cb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7d6f4fbed964483590472a14282bd0e8", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -106,7 +106,7 @@ using ASP.net_ORM_Test.Models;
             WriteLiteral("\n            <a href=\"/Metric/TiempoDeRespuesta\" class=\"btn btn-primary\" role=\"button\">Ejecutar Prueba</a>\n        </div>\n    </div>\n    <hr />\n    <div class=\"row\">\n        <div class=\"col\">\n            ");
             EndContext();
             BeginContext(904, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6a93793e6e1d4dcead58e6c41893f3ee", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f83e476b808145fc9ffe03f66eba0c4f", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -138,7 +138,7 @@ using ASP.net_ORM_Test.Models;
             ");
             EndContext();
             BeginContext(1293, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2605803a20874ab6bdc20ce505597f74", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4b8a5fb69c3a40ec942ebbb0bf6eadf3", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -157,7 +157,7 @@ using ASP.net_ORM_Test.Models;
             WriteLiteral("\n            <a href=\"/Metric/UtilizacionDeMemoria\" class=\"btn btn-primary\" role=\"button\">Ejecutar Prueba</a>\n        </div>\n    </div>\n    <hr />\n    <div class=\"row\">\n        <div class=\"col\">\n            ");
             EndContext();
             BeginContext(1570, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "94111e76faaa4ac9b640a411eecf8d03", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1dc7bb83d94d47969789ecf0380cdc57", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -189,7 +189,7 @@ using ASP.net_ORM_Test.Models;
             ");
             EndContext();
             BeginContext(1972, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fa4890e1d7634237bfdd316394822ab8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d2cead8aac704f459010513d3dbbb8ee", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -208,7 +208,7 @@ using ASP.net_ORM_Test.Models;
             WriteLiteral("\n            <a href=\"/Metric/Capacidad\" class=\"btn btn-primary\" role=\"button\">Ejecutar Prueba</a>\n        </div>\n    </div>\n    <hr />\n    <div class=\"row\">\n        <div class=\"col\">\n            ");
             EndContext();
             BeginContext(2227, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d83150471e894e0b885e1ce1e3258376", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "77bfdcf76efc4d02b739a58001e8a535", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

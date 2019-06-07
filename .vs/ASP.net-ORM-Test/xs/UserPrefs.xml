@@ -1,31 +1,26 @@
 ﻿<Properties StartupConfiguration="{E60209DC-C100-4560-8750-8D149B0D1F16}|Default">
   <MonoDevelop.Ide.ItemProperties.ASP.net-ORM-Test PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Metric/Capacidad.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/MetricController.cs">
     <Files>
-      <File FileName="Views/Shared/metrics/_VelocidadBajoEstres.cshtml" Line="16" Column="16" />
-      <File FileName="Views/Shared/metrics/_TiempoDeRespuesta.cshtml" Line="14" Column="16" />
-      <File FileName="Views/Metric/TiempoDeRespuesta.cshtml" Line="23" Column="17" />
+      <File FileName="Views/Metric/TiempoDeRespuesta.cshtml" Line="10" Column="22" />
       <File FileName="Views/Metric/UtilizacionDeCache.cshtml" Line="56" Column="22" />
       <File FileName="Views/Metric/UtilizacionDeMemoria.cshtml" Line="25" Column="25" />
       <File FileName="Views/Metric/Rendimiento.cshtml" Line="35" Column="22" />
-      <File FileName="Controllers/MetricController.cs" Line="41" Column="42" />
-      <File FileName="Views/Metric/VelocidadBajoEstres.cshtml" Line="11" Column="15" />
+      <File FileName="Controllers/MetricController.cs" Line="31" Column="1" />
+      <File FileName="Views/Metric/VelocidadBajoEstres.cshtml" Line="26" Column="35" />
       <File FileName="wwwroot/images/metrics/TiempoDeRespuesta.cshtml" Line="1" Column="1" />
-      <File FileName="Program.cs" Line="44" Column="1" />
-      <File FileName="Views/Metric/Capacidad.cshtml" Line="28" Column="10" />
+      <File FileName="Program.cs" Line="9" Column="42" />
+      <File FileName="Views/Metric/Capacidad.cshtml" Line="23" Column="30" />
+      <File FileName="Startup.cs" Line="32" Column="53" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASP.net-ORM-Test" expanded="True">
             <Node name="ASP.net-ORM-Test" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Metric" expanded="True">
-                  <Node name="Capacidad.cshtml" selected="True" />
-                </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="MetricController.cs" selected="True" />
               </Node>
-              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>

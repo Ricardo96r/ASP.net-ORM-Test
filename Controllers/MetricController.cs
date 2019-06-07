@@ -4,9 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Collections.Generic;
 using System;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
-using System.Runtime.InteropServices;
 
 namespace ASP.net_ORM_Test.Controllers
 {

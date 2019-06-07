@@ -1,9 +1,3 @@
-/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.csprojAssemblyReference.cache
-/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.csproj.CoreCompileInputs.cache
-/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.RazorAssemblyInfo.cache
-/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.RazorAssemblyInfo.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.AssemblyInfoInputs.cache
-/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.AssemblyInfo.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/bin/Debug/netcoreapp2.1/ASP.net-ORM-Test.deps.json
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/bin/Debug/netcoreapp2.1/ASP.net-ORM-Test.runtimeconfig.json
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/bin/Debug/netcoreapp2.1/ASP.net-ORM-Test.runtimeconfig.dev.json
@@ -11,6 +5,12 @@
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/bin/Debug/netcoreapp2.1/ASP.net-ORM-Test.pdb
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/bin/Debug/netcoreapp2.1/ASP.net-ORM-Test.Views.dll
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/bin/Debug/netcoreapp2.1/ASP.net-ORM-Test.Views.pdb
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.csprojAssemblyReference.cache
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.csproj.CoreCompileInputs.cache
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.RazorAssemblyInfo.cache
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.RazorAssemblyInfo.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.AssemblyInfoInputs.cache
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.AssemblyInfo.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.TagHelpers.input.cache
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.TagHelpers.output.cache
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Debug/netcoreapp2.1/ASP.net-ORM-Test.RazorCoreGenerate.cache

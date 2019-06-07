@@ -30,6 +30,7 @@
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/metrics/_TiempoDeRespuesta.g.cshtml.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/metrics/_UtilizacionDeCache.g.cshtml.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/metrics/_UtilizacionDeMemoria.g.cshtml.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/metrics/_VelocidadBajoEstres.g.cshtml.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
@@ -41,4 +42,3 @@
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/ASP.net-ORM-Test.dll
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/ASP.net-ORM-Test.pdb
 /Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/ASP.net-ORM-Test.csproj.CopyComplete
-/Users/ricardorodriguez/Documents/PROYECTOS/ASP.net-ORM-Test/obj/Release/netcoreapp2.1/Razor/Views/Shared/metrics/_VelocidadBajoEstres.g.cshtml.cs

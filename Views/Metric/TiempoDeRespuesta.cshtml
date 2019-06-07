@@ -28,14 +28,13 @@
 
                     @{int i = 1;}
                     @foreach (var item in ViewBag.msList)
-    {
-                <tr>
-                    <td>@i</td>
-                    <td>@item</td>
-                </tr>
-i++;
-}
-
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item</td>
+                        </tr>
+                    i++;
+                    }
                 </table>
                 </div>
             <div class="col-xs-6">
