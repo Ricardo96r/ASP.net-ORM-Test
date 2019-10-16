@@ -1,0 +1,51 @@
+﻿<div class="row">
+    <div class="col">
+        <h1>Comportamiento temporal</h1>
+    </div>
+</div>
+<hr /> 
+<div class="row">
+    <div class="col">
+        <partial name="~/Views/Shared/Metrics/_TiempoMedioDeRespuesta.cshtml" />
+        <h3>Código</h3>
+        <hr />
+        <img src="~/images/metrics/tiempoDeRespuesta.png" width="400" />
+
+        <h3>Anotaciones</h3>
+        <hr />
+        <p>Para obtener los resultados para la metrica de <strong>tiempo de respuesta</strong> se tuvo que usar la libreria <code>Stopwatch</code> para medir el tiempo que tarda una peticion simple al ORM, el tiempo medido es en milisegundos.</p>
+        <p>La peticion simple realizada con el Entity Framework fue traer un estudiante de la base de datos a traves de su ID <code>context.Students.Find(i);</code> Se repite el proceso @ViewBag.msList.Count veces con @ViewBag.msList.Count estudiantes diferentes.</p>
+        <h3>Resultados</h3>
+        <hr />
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>Tiempo (ms)</h4>
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Miliseconds</th>
+                    </tr>
+
+                    @{int i = 1;}
+                    @foreach (var item in ViewBag.msList)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item</td>
+                        </tr>
+                    i++;
+                    }
+                </table>
+                </div>
+            <div class="col-xs-6">
+                <h4>Tiempo de respuesta</h4>
+                <h5><strong>X = </strong>@ViewBag.xResult</h5>
+                <p><strong>Cantidad de pruebas: </strong>@ViewBag.msList.Count</p>
+                <p><strong>Promedio: </strong>@ViewBag.msAverage ms</p>
+                <p><strong>Desviación estandar: </strong>@ViewBag.msStdDev ms</p>
+                <p><strong>Error: </strong>@ViewBag.msStandardError ms</p>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron jumbotron-fluid mt-4">
+                <div class="container">
+                    <h1>ASP.net ORM Test</h1>
+                    <p class="lead">Pruebas realizadas bajos las metricas de la <strong>ISO/IEC 25023</strong></p>
+                    <p>ASP.net version: <strong>@ViewBag.version</strong> </p>
+                    <small>OS: <strong>@ViewBag.os</strong></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h1>Comportamiento temporal</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <partial name="~/Views/Shared/Metrics/_TiempoMedioDeRespuesta.cshtml" />
+            <a href="/Metric/TiempoMedioDeRespuesta" class="btn btn-primary" role="button">Ejecutar Prueba</a>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <partial name="~/Views/Shared/Metrics/_RendimientoMedio.cshtml" />
+            <a href="/Metric/RendimientoMedio" class="btn btn-primary" role="button">Ejecutar Prueba</a>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <h1>Utilización de recursos</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <partial name="~/Views/Shared/Metrics/_CantidadMediaDeMemoriaUtilizada.cshtml" />
+            <a href="/Metric/CantidadMediaDeMemoriaUtilizada" class="btn btn-primary" role="button">Ejecutar Prueba</a>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <partial name="~/Views/Shared/Metrics/_UtilizacionDeCache.cshtml" />
+            <a href="/Metric/UtilizacionDeCache" class="btn btn-primary" role="button">Ejecutar Prueba</a>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <h1>Capacidad del software</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <partial name="~/Views/Shared/Metrics/_Capacidad.cshtml" />
+            <a href="/Metric/Capacidad" class="btn btn-primary" role="button">Ejecutar Prueba</a>
+        </div>
+    </div>
+</div>
