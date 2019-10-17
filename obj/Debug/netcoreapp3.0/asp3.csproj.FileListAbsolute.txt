@@ -41,15 +41,6 @@
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/bin/Debug/netcoreapp3.0/System.Interactive.Async.dll
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Home/About.cshtml.g.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Home/Contact.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/Capacidad.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/RendimientoConHilos.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/UtilizacionDeCache.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/UtilizacionDeMemoria.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/VelocidadBajoEstres.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_Capacidad.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_UtilizacionDeCache.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_UtilizacionDeMemoria.cshtml.g.cs
-/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_VelocidadBajoEstres.cshtml.g.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Home/Index.cshtml.g.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Home/Privacy.cshtml.g.cs
@@ -76,3 +67,9 @@
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_TiempoMedioDeRespuesta.cshtml.g.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/RendimientoMedio.cshtml.g.cs
 /Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_RendimientoMedio.cshtml.g.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/CantidadMediaDeMemoriaUtilizada.cshtml.g.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/CapacidadDeProcesamientoDeTransacciones.cshtml.g.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Metric/UtilizacionMediaDelProcesador.cshtml.g.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_CantidadMediaDeMemoriaUtilizada.cshtml.g.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_CapacidadDeProcesamientoDeTransacciones.cshtml.g.cs
+/Users/ricardorodriguez/Documents/PROYECTOS/asp3/obj/Debug/netcoreapp3.0/Razor/Views/Shared/metrics/_UtilizacionMediaDelProcesador.cshtml.g.cs

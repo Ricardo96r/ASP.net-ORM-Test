@@ -7,6 +7,8 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Runtime.InteropServices;
+using Bogus;
+using ASP.netORMTest.Models;
 
 namespace ASP.net_ORM_Test.Controllers
 {
@@ -22,24 +24,34 @@ namespace ASP.net_ORM_Test.Controllers
         public double StandardDeviation(List<double> values)
         {
             double avg = values.Average();
-            return Math.Sqrt(values.Average(v => Math.Pow(v - avg, 2)));
+            double result = Math.Sqrt(values.Average(v => Math.Pow(v - avg, 2)));
+
+            return Math.Round(result, 4);
         }
 
         public double StandardError(List<double> values)
         {
             double standarDeviation = StandardDeviation(values);
-            return 3 * (standarDeviation / Math.Sqrt(values.Count));
+            double result = 3 * (standarDeviation / Math.Sqrt(values.Count));
+
+            return Math.Round(result, 4);
+        }
+
+        public double Average(List<double> values)
+        {
+            double result = values.Average();
+            return Math.Round(result, 4);
         }
 
         public void ActiveDatabase()
-        {
+        { 
             context.Students.Find(10000);
         }
 
-        public double getMiliseconds(decimal ticks)
+        public double getMiliseconds(Stopwatch watch)
         {
-            decimal miliseconds = (decimal) (ticks / 100000);
-            decimal round = Math.Round(miliseconds, 4);
+           
+            decimal round = Math.Round((decimal) watch.Elapsed.TotalMilliseconds, 4);
             return (double)round;
         }
 
@@ -47,17 +59,18 @@ namespace ASP.net_ORM_Test.Controllers
         {
             List<double> ms = new List<double>();
 
-            for (int i = 1; i <= 100; i++)
+            for (int i = 1; i <= 10000; i++)
             {
                 ActiveDatabase();
                 var watch = Stopwatch.StartNew();
                 context.Students.Find(i);
                 watch.Stop();
-                ms.Add(getMiliseconds(watch.ElapsedTicks));
+                ms.Add(getMiliseconds(watch));
             }
 
             ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
+            ViewBag.xResult = Math.Round((ms.Sum() / ms.Count), 4);
+            ViewBag.msAverage = Average(ms);
             ViewBag.msStdDev = StandardDeviation(ms);
             ViewBag.msStandardError = StandardError(ms);
 
@@ -73,7 +86,7 @@ namespace ASP.net_ORM_Test.Controllers
                 ActiveDatabase();
                 var watch = Stopwatch.StartNew();
                 var j = 1;
-                while (getMiliseconds(watch.ElapsedTicks) < 100)
+                while (getMiliseconds(watch) < 100)
                 {
                     context.Students.Find(j + count);
                     j++;
@@ -83,6 +96,7 @@ namespace ASP.net_ORM_Test.Controllers
                 count += j;
             }
 
+            ViewBag.xResult = Math.Round(((ms.Sum() / 0.100) / ms.Count()), 4);
             ViewBag.msList = ms;
             ViewBag.msAverage = ms.Average();
             ViewBag.msStdDev = StandardDeviation(ms);
@@ -111,75 +125,129 @@ namespace ASP.net_ORM_Test.Controllers
             return View();
         }
 
-        public IActionResult UtilizacionDeCache()
+        public IActionResult UtilizacionMediaDelProcesador()
+        {
+            List<double> processorMs = new List<double>();
+            List<double> operationMs = new List<double>();
+            for (int i = 1; i <= 100; i++)
+            {
+                var processorMsSum = 0.00;
+                ActiveDatabase();
+                var watchOperation = Stopwatch.StartNew();
+
+                var watchProcessor1 = Stopwatch.StartNew();
+                context.Students.Find(i + 1);
+                watchProcessor1.Stop();
+                processorMsSum += getMiliseconds(watchProcessor1);
+
+                var watchProcessor2 = Stopwatch.StartNew();
+                context.Teachers.Find(i + 1);
+                watchProcessor2.Stop();
+                processorMsSum += getMiliseconds(watchProcessor2);
+
+                var watchProcessor3 = Stopwatch.StartNew();
+                context.Lessons.Find(i + 1);
+                watchProcessor3.Stop();
+                processorMsSum += getMiliseconds(watchProcessor3);
+
+                watchOperation.Stop();
+
+                processorMs.Add(Math.Round(processorMsSum, 4));
+                operationMs.Add(getMiliseconds(watchOperation));
+            }
+
+            var xResult = 0.00;
+
+            for (int i = 0; i < 100; i++)
+            {
+                xResult += processorMs[i] / operationMs[i];
+            }
+
+            xResult = xResult / 100;
+
+            ViewBag.xResult = Math.Round(xResult, 4);
+
+            ViewBag.processorList = processorMs;
+            ViewBag.processorAverage = Average(processorMs);
+            ViewBag.processorStdDev = StandardDeviation(processorMs);
+            ViewBag.processorStandardError = StandardError(processorMs);
+
+            ViewBag.operationList = operationMs;
+            ViewBag.operationAverage = Average(processorMs);
+            ViewBag.operationStdDev = StandardDeviation(operationMs);
+            ViewBag.operationStandardError = StandardError(operationMs);
+
+            return View();
+        }
+
+        public IActionResult CapacidadDeProcesamientoDeTransacciones()
         {
             List<double> ms = new List<double>();
-            List<double> kb = new List<double>();
 
             for (int i = 1; i <= 100; i++)
             {
-                ActiveDatabase();
-                var watch = Stopwatch.StartNew();
-                var now = GC.GetTotalMemory(false);
-                context.Students.Find(1);
-                var after = GC.GetTotalMemory(false);
-                watch.Stop();
-                kb.Add(after - now);
-                ms.Add(getMiliseconds(watch.ElapsedTicks));
-            }
-
-            ViewBag.kbList = kb;
-            ViewBag.kbAverage = kb.Average();
-            ViewBag.kbStdDev = StandardDeviation(kb);
-            ViewBag.kbStandardError = StandardError(kb);
-
-            ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
-            ViewBag.msStdDev = StandardDeviation(ms);
-            ViewBag.msStandardError = StandardError(ms);
-
-            return View();
-        }
-
-        public IActionResult Capacidad()
-        {
-            List<double> ms = new List<double>();
-
-            for (int i = 1; i <= 1000; i++)
-            {
-                ActiveDatabase();
-                var watch = Stopwatch.StartNew();
-                context.Students.Find(i);
-                watch.Stop();
-                ms.Add(getMiliseconds(watch.ElapsedTicks));
-            }
-
-            ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
-            ViewBag.msStdDev = StandardDeviation(ms);
-            ViewBag.msStandardError = StandardError(ms);
-
-            return View();
-        }
-
-        public IActionResult VelocidadBajoEstres()
-        {
-            List<double> ms = new List<double>();
-            ActiveDatabase();
-            var iterations = 100;
-            for (int i = 1; i <= iterations; i++)
-            {
-                var watch = Stopwatch.StartNew();
-                for (int j = 1; j <= iterations; j++)
+                var faker = new Faker("en");
+                var students = new List<Student>();
+                var teacher = new Teacher();
+                var lesson = new Lesson();
+                var lessonStudent = new List<LessonStudent>();
+                for (var j = 1; j <= 20; j++)
                 {
-                    context.Students.Find(j + (i * iterations));
+                    students.Add(
+                        new Student()
+                        {
+                            Name = faker.Name.FirstName(),
+                            Lastname = faker.Name.LastName(),
+                            Address = faker.Address.FullAddress(),
+                            Birthday = faker.Date.Past(),
+                        }
+                    );
                 }
+
+                teacher = new Teacher()
+                {
+                    Name = faker.Name.FirstName(),
+                    Lastname = faker.Name.LastName(),
+                    Address = faker.Address.FullAddress(),
+                    Birthday = faker.Date.Past(),
+                    Profession = faker.Person.Company.Name,
+                };
+
+                lesson = new Lesson()
+                {
+                    Name = faker.Name.FirstName(),
+                    Teacher = teacher,
+                };
+
+                for (var j = 0; j < 20; j++)
+                {
+                    lessonStudent.Add(
+                        new LessonStudent()
+                        {
+                            Lesson = lesson,
+                            Student = students[j],
+                        }
+                    );
+                }
+
+                lesson.LessonStudents = lessonStudent;
+
+                ActiveDatabase();
+                var watch = Stopwatch.StartNew();
+                using (var dbContextTransaction = context.Database.BeginTransaction())
+                {
+                    context.Lessons.Add(lesson);
+                    context.SaveChanges();
+                    dbContextTransaction.Commit();
+                }
+
                 watch.Stop();
-                ms.Add(getMiliseconds(watch.ElapsedTicks) / iterations);
+                ms.Add(getMiliseconds(watch));
             }
 
+            ViewBag.xResult = Average(ms);
             ViewBag.msList = ms;
-            ViewBag.msAverage = ms.Average();
+            ViewBag.msAverage = Average(ms);
             ViewBag.msStdDev = StandardDeviation(ms);
             ViewBag.msStandardError = StandardError(ms);
 
