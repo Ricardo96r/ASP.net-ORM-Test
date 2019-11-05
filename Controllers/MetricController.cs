@@ -59,7 +59,7 @@ namespace ASP.net_ORM_Test.Controllers
         {
             List<double> ms = new List<double>();
 
-            for (int i = 1; i <= 10000; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 ActiveDatabase();
                 var watch = Stopwatch.StartNew();
@@ -86,7 +86,7 @@ namespace ASP.net_ORM_Test.Controllers
                 ActiveDatabase();
                 var watch = Stopwatch.StartNew();
                 var j = 1;
-                while (getMiliseconds(watch) < 100)
+                while (getMiliseconds(watch) < 1000)
                 {
                     context.Students.Find(j + count);
                     j++;
@@ -94,9 +94,10 @@ namespace ASP.net_ORM_Test.Controllers
                 watch.Stop();
                 ms.Add(j);
                 count += j;
+                Console.WriteLine(i);
             }
 
-            ViewBag.xResult = Math.Round(((ms.Sum() / 0.100) / ms.Count()), 4);
+            ViewBag.xResult = Math.Round(((ms.Sum() / 1) / ms.Count()), 4);
             ViewBag.msList = ms;
             ViewBag.msAverage = ms.Average();
             ViewBag.msStdDev = StandardDeviation(ms);
@@ -182,75 +183,72 @@ namespace ASP.net_ORM_Test.Controllers
 
         public IActionResult CapacidadDeProcesamientoDeTransacciones()
         {
-            List<double> ms = new List<double>();
+            List<double> peticiones = new List<double>();
 
             for (int i = 1; i <= 100; i++)
             {
-                var faker = new Faker("en");
-                var students = new List<Student>();
-                var teacher = new Teacher();
-                var lesson = new Lesson();
-                var lessonStudent = new List<LessonStudent>();
-                for (var j = 1; j <= 20; j++)
-                {
-                    students.Add(
-                        new Student()
-                        {
-                            Name = faker.Name.FirstName(),
-                            Lastname = faker.Name.LastName(),
-                            Address = faker.Address.FullAddress(),
-                            Birthday = faker.Date.Past(),
-                        }
-                    );
-                }
-
-                teacher = new Teacher()
-                {
-                    Name = faker.Name.FirstName(),
-                    Lastname = faker.Name.LastName(),
-                    Address = faker.Address.FullAddress(),
-                    Birthday = faker.Date.Past(),
-                    Profession = faker.Person.Company.Name,
-                };
-
-                lesson = new Lesson()
-                {
-                    Name = faker.Name.FirstName(),
-                    Teacher = teacher,
-                };
-
-                for (var j = 0; j < 20; j++)
-                {
-                    lessonStudent.Add(
-                        new LessonStudent()
-                        {
-                            Lesson = lesson,
-                            Student = students[j],
-                        }
-                    );
-                }
-
-                lesson.LessonStudents = lessonStudent;
-
-                ActiveDatabase();
                 var watch = Stopwatch.StartNew();
-                using (var dbContextTransaction = context.Database.BeginTransaction())
+                var j = 1;
+                while (getMiliseconds(watch) < 1000)
                 {
-                    context.Lessons.Add(lesson);
-                    context.SaveChanges();
-                    dbContextTransaction.Commit();
+                    var faker = new Faker("en");
+                    var students = new List<Student>();
+                    var teacher = new Teacher();
+                    var lesson = new Lesson();
+                    var lessonStudent = new List<LessonStudent>();
+                    for (var k = 1; k <= 20; k++)
+                    {
+                        students.Add(
+                            new Student()
+                            {
+                                Name = faker.Name.FirstName(),
+                                Lastname = faker.Name.LastName(),
+                                Address = faker.Address.FullAddress(),
+                                Birthday = faker.Date.Past(),
+                            }
+                        );
+                    }
+                    teacher = new Teacher()
+                    {
+                        Name = faker.Name.FirstName(),
+                        Lastname = faker.Name.LastName(),
+                        Address = faker.Address.FullAddress(),
+                        Birthday = faker.Date.Past(),
+                        Profession = faker.Person.Company.Name,
+                    };
+                    lesson = new Lesson()
+                    {
+                        Name = faker.Name.FirstName(),
+                        Teacher = teacher,
+                    };
+                    for (var k = 0; k < 20; k++)
+                    {
+                        lessonStudent.Add(
+                            new LessonStudent()
+                            {
+                                Lesson = lesson,
+                                Student = students[k],
+                            }
+                        );
+                    }
+                    lesson.LessonStudents = lessonStudent;
+                    using (var dbContextTransaction = context.Database.BeginTransaction())
+                    {
+                        context.Lessons.Add(lesson);
+                        context.SaveChanges();
+                        dbContextTransaction.Commit();
+                    }
+                    j++;
                 }
-
                 watch.Stop();
-                ms.Add(getMiliseconds(watch));
+                Console.WriteLine(i);
+                peticiones.Add(j);
             }
-
-            ViewBag.xResult = Average(ms);
-            ViewBag.msList = ms;
-            ViewBag.msAverage = Average(ms);
-            ViewBag.msStdDev = StandardDeviation(ms);
-            ViewBag.msStandardError = StandardError(ms);
-
+            ViewBag.xResult = Average(peticiones);
+            ViewBag.msList = peticiones;
+            ViewBag.msAverage = Average(peticiones);
+            ViewBag.msStdDev = StandardDeviation(peticiones);
+            ViewBag.msStandardError = StandardError(peticiones);
             return View();
         }
     }
